@@ -14,7 +14,7 @@ $authenticationSource   = $janusConfig->getValue('auth'           , 'login-admin
 /** @var string $userIdAttribute */
 $userIdAttribute        = $janusConfig->getValue('useridattr'     , 'eduPersonPrincipalName');
 /** @var string $defaultUserType */
-$defaultUserType        = $janusConfig->getValue('defaultusertype', 'technical');
+$defaultUserType        = $janusConfig->getValue('defaultusertype', array('admin', 'technical'));
 
 $as = new \SimpleSAML\Auth\Simple($authenticationSource);
 
