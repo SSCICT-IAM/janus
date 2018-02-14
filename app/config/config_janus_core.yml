@@ -364,6 +364,13 @@ janus_service_registry_core:
                 default: ''
                 default_allow: false
                 required: false
+            'coin:signature_method':
+                type: select
+                required: false
+                select_values:
+                    - 'http://www.w3.org/2000/09/xmldsig#rsa-sha1'
+                    - 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
+                default_allow: true
 
         # Allowed metadata names for shib IdPs.
         shib13-idp:
@@ -766,6 +773,14 @@ janus_service_registry_core:
                 default: false
                 default_allow: true
                 required: false
+            'coin:signature_method':
+                type: select
+                required: false
+                select_values:
+                    - 'http://www.w3.org/2000/09/xmldsig#rsa-sha1'
+                    - 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
+                default_allow: true
+
     # specify mapping from metadata key to db key
     md:
         mapping:
